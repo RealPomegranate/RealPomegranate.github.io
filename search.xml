@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>obsidian 便捷撰写并管理博客文章</title>
+    <url>/2025/01/25/Obsidian%20%E4%BE%BF%E6%8D%B7%E6%92%B0%E5%86%99%E5%B9%B6%E7%AE%A1%E7%90%86%20Hexo%20%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<p>Obsidian 是一款异常强大的 markdown 文档编辑器，本文将介绍如何使用 Obsidian 的简单功能更方便的进行博客写作。</p>
+<h2 id="下载-Obsidian"><a href="#下载-Obsidian" class="headerlink" title="下载 Obsidian"></a>下载 Obsidian</h2><p>这是 Obsidian 的下载链接：<a href="https://obsidian.md/download">Download - Obsidian</a>，直接点击对应版本下载安装即可。</p>
+<h2 id="选择并配置-Obsidian-仓库"><a href="#选择并配置-Obsidian-仓库" class="headerlink" title="选择并配置 Obsidian 仓库"></a>选择并配置 Obsidian 仓库</h2><h3 id="仓库选择"><a href="#仓库选择" class="headerlink" title="仓库选择"></a>仓库选择</h3><p>在第一次打开 Obsidian 时，看到的页面如下图所示：<br><img src="/../img/Pasted%20image%2020250125210214.png"><br>这里我们选择打开本地仓库，文件夹选择之前创建博客网站的文件夹，比如D:&#x2F;blog&#x2F;。选择完成后，就进入了仓库页面：<br><img src="/../img/Pasted%20image%2020250125211236.png"></p>
+<h3 id="仓库配置"><a href="#仓库配置" class="headerlink" title="仓库配置"></a>仓库配置</h3><p>接下来，将对该仓库进行一系列的配置，使之适合我们博客写作和上传。首先，我们先点击左侧栏的右下角的齿轮图标进入仓库设置（左侧栏可以点击窗口左上角按钮展开或收起），设置界面如下图所示：<br><img src="/../img/Pasted%20image%2020250125211846.png"></p>
+<h4 id="文件与链接"><a href="#文件与链接" class="headerlink" title="文件与链接"></a>文件与链接</h4><p>在进行相应的设置之前，需要你在“source”文件夹下新建一个“img”文件夹，用于存放图片。具体操作可以直接在左侧栏右键“source”，在右键菜单栏中选择新建文件夹：<br><img src="/../img/Pasted%20image%2020250125214111.png"></p>
+<p>打开设置界面，点击文件与链接，需要设置的内容如下：</p>
+<ol>
+<li>开启“始终更新内部链接”，当文件位置改变时 markdown 笔记中的内部链接会自动改变，建议开启。</li>
+<li>“新建笔记的存放位置”改为“指定的附件文件夹”。在随之出现的“存放新建笔记的文件夹”一栏填入“source&#x2F;_posts”。</li>
+<li>“内部链接类型”改为“基于当前笔记的相对路径”。</li>
+<li>关闭“使用Wiki链接”。</li>
+<li>“附件默认存放路径”改为“指定的附件文件夹”，在随后的“附件文件夹路径”一栏填入“source&#x2F;\img”</li>
+</ol>
+<p><img src="/../img/Pasted%20image%2020250125212119.png"></p>
+<h4 id="模板设置"><a href="#模板设置" class="headerlink" title="模板设置"></a>模板设置</h4><p>模板是 obsidian 一个非常便利的功能，它允许你在任意笔记里插入事先准备好的内容。而使用 Hexo 框架的博客文章都需要一个 yml 头来标注博客的属性，这里我们就可以直接使用模板将其事先准备好。具体操作步骤如下：</p>
+<ol>
+<li>在仓库里新建一个文件夹用来存放模板，这里我直接在仓库根目录下新建了一个“Templates”文件夹。</li>
+<li>接着在“Templates”文件夹下新建一个笔记作为日后使用的模板，这里我将该笔记命名为“Posts_template”，内容如下，直接将其复制到该笔记里即可：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标题</span><br><span class="line">date: &quot;&#123;&#123;date&#125;&#125; &#123;&#123;time&#125;&#125;&quot;</span><br><span class="line">updated: 更新日期</span><br><span class="line">tags:</span><br><span class="line">  - &quot;#标签1&quot;</span><br><span class="line">  - &quot;#标签2&quot;</span><br><span class="line">categories: </span><br><span class="line">  - 分类</span><br><span class="line">keywords: 关键词</span><br><span class="line">description: 简要描述</span><br><span class="line">comments: false</span><br><span class="line">top_img: /img/顶部图.webp</span><br><span class="line">cover: ./img/***.jpg</span><br><span class="line">copyright: </span><br><span class="line">copyright_author: </span><br><span class="line">copyright_author_href: </span><br><span class="line">copyright_url: </span><br><span class="line">copyright_info:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>打开设置页面，选择模板，将“模板文件夹位置”一栏填上如你的模板文件夹，比如我的是“Templates”。<br><img src="/../img/Pasted%20image%2020250125221616.png"></li>
+</ol>
+<h4 id="Terminal-插件"><a href="#Terminal-插件" class="headerlink" title="Terminal 插件"></a>Terminal 插件</h4><p>Obsidian 最强大的一点就是它拥有丰富的第三方插件，给 Obsidian 提供居多的额外功能。这里我们使用 Terminal 插件，它可以直接在仓库里打开 cmd，方便我们输入指令以预览和发布新文章。以下是安装步骤：</p>
+<ol>
+<li>打开设置页面，选择第三方插件，关闭安全模式，点击浏览社区插件市场。<br><img src="/../img/Pasted%20image%2020250125222801.png"></li>
+<li>搜索 “terminal” ，选择对应插件，点击安装并等待安装完成。<br><img src="/../img/Pasted%20image%2020250125222958.png"></li>
+<li>关闭插件市场，在“已安装插件”一栏开启 Terminal 插件。<br><img src="/../img/Pasted%20image%2020250125222801.png"></li>
+</ol>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p>建议在“设置-编辑器-显示-笔记属性”改为“源码”，防止出现 yml 语法错误。<br><img src="/../img/Pasted%20image%2020250125230521.png"></p>
+<h3 id="写作流程"><a href="#写作流程" class="headerlink" title="写作流程"></a>写作流程</h3><p>至此，本仓库的配置已经全部完成，接下来就是写作流程的介绍：</p>
+<ol>
+<li>在左侧栏点击新建笔记，主窗口将自动跳转到新笔记页面。<br><img src="/../img/Pasted%20image%2020250125223747.png"></li>
+<li>点击“插入模板”按钮，选择你之前创建的模板。<br><img src="/../img/Pasted%20image%2020250125224014.png"></li>
+<li>编辑文章属性，比如将“title:”后面的“标题”改为本文标题（注意冒号后面要空一格），以此类推。以下是 “butterfly” 主题的全部文章属性，必需的一定要填，其他的可以留空或直接删掉。<br><img src="/../img/Pasted%20image%2020250125224606.png"></li>
+<li>属性填好后，在第二个“—”后另起一行开始编辑正文内容。如果想丰富样式可以选择使用<a href="https://markdown.com.cn/basic-syntax/">Markdown 基本语法</a>，当然你也可以直接写。可以直接粘贴图片，图片是以链接的形式存在的，粘贴好了就不要动了。</li>
+<li>在完成写作之后，点击左侧栏这个按钮，在弹窗中windows系统选择倒数第二个<code>&quot;.外部.win32 ExternalDefault..</code>点击，就会在该目录下弹出 cmd。<br><img src="/../img/Pasted%20image%2020250125225704.png"></li>
+<li>在 cmd 窗口中可以先输入<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>，在本地预览新文章。确认无误后，接着输入<code>hexo d</code>发布到网站。</li>
+</ol>
+<h2 id="其他建议"><a href="#其他建议" class="headerlink" title="其他建议"></a>其他建议</h2><ol>
+<li>插件<br>  Terminal 插件有时候有问题，可以下载 Open vault in VSCode 插件。这个插件可以一键在 VSCode 里打开仓库，在 VSCode 用终端输命令就完全没问题了。</li>
+<li>问题反馈<br>  遇到问题欢迎直接联系我或在留言板反馈。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>折腾日记</category>
+      </categories>
+      <tags>
+        <tag>#obsidian</tag>
+        <tag>#博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo + github page 实现个人博客的上线</title>
     <url>/2023/02/23/Hexo%20+%20Github%20page%20%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%8A%E7%BA%BF/</url>
     <content><![CDATA[<p>时隔整整一年，我重新上线了我的个人博客。这里以曾经上线博客的过程记录为基础重新调整，使之更为清晰易懂。</p>
@@ -94,6 +149,7 @@
 <ul>
 <li><a href="https://forum-zh.obsidian.md/t/topic/435/30">使用butterfly主题美化博客（施工中）</a></li>
 <li><a href="https://forum-zh.obsidian.md/t/topic/435/30">使用obsidian编写博客文章（施工中）</a></li>
+<li><a href="https://forum-zh.obsidian.md/t/topic/435/30">网站部署的其他方式（施工中）</a></li>
 </ul>
 <p>如遇到问题欢迎在留言版留言或通过其他方式联系我。</p>
 ]]></content>
